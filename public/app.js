@@ -6,47 +6,54 @@ axios.get('/api/busks')
 
     data.forEach(busk => {
 
-      let buskElem = document.createElement('div')
-      buskElem.className = 'row'
+      let buskElem = document.createElement('tr')
+      // buskElem.className = 'row'
       buskElem.innerHTML = `
-        <div class="col-lg-2">
-          <h2>Artist Name</h2>
-          
-            <p data-artistId="${busk.artist.id}">${busk.artist.name}</p>
-          
-        </div>
-
-        <div class="col-lg-2">
-          <h2>Addresses</h2>
-
-          <p>${busk.location}</p>
-          
-        </div>
-        <div class="col-lg-2">
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit dolore, temporibus incidunt aspernatur odio
-            praesentium culpa consectetur repellat recusandae voluptatibus quasi eos natus sed, iure, eaque illum
-            excepturi consequatur delectus.</p>
-        </div>
-        <div class="col-lg-2">
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit dolore, temporibus incidunt aspernatur odio
-            praesentium culpa consectetur repellat recusandae voluptatibus quasi eos natus sed, iure, eaque illum
-            excepturi co
-            nsequatur delectus.</p>
-        </div>
-        <div class="col-lg-2">
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit dolore, temporibus incidunt aspernatur odio
-            praesentium culpa consectetur repellat recusandae voluptatibus quasi eos natus sed, iure, eaque illum
-            excepturi consequatur delectus.</p>
-        </div>
-
-        <div class="col-lg-2">
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit dolore, temporibus incidunt aspernatur odio
-            praesentium culpa consectetur repellat recusandae voluptatibus quasi eos natus sed, iure, eaque illum
-            excepturi consequatur delectus.</p>
-        </div>
+        <th scope="row">${busk.artist.name}</th>
+        <td>${busk.location}</td>
+        <td>${busk.artist.genre}</td>
+        <td>Start:${busk.start}-End:${busk.end}</td>
+        <td>${busk.date}</td>
+        <td>${busk.counter} <button class="btn btn-primary">I'm Attending!</button></td>  
       `
-      document.getElementById('test').append(buskElem)
+      document.getElementById('busks').append(buskElem)
     })
 
   })
   .catch(err => console.log(err))
+
+
+  // Create a new busk
+
+  document.getElementById('addBusk').addEventListener('click', event => {
+    event.preventDefault()
+    console.log('pingh')
+
+    axios.post('/api/busks', { 
+      date: document.getElementById('date').value, 
+      location: document.getElementById('location').value, 
+      start: document.getElementById('startTime').value, 
+      end: document.getElementById('endTime').value
+    }) 
+      .then(({ data }) => {
+        console.log(data)
+    
+          let buskElem = document.createElement('tr')
+          // buskElem.className = 'row'
+          buskElem.innerHTML = `
+            <th scope="row">${document.getElementById('artistName').value}</th>
+            <td>${document.getElementById('location').value}</td>
+            <td>${document.getElementById('genre').value}</td>
+            <td>Start:${document.getElementById('startTime').value}-End:${document.getElementById('endTime').value}</td>
+            <td>${document.getElementById('date').value}</td>
+            <td>0 <button class="btn btn-primary">I'm Attending!</button></td>  
+          `
+          document.getElementById('busks').append(buskElem)
+        })
+    
+        .catch(err => console.log(err))
+      })
+
+
+
+  
