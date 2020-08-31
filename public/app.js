@@ -28,12 +28,14 @@ axios.get('/api/busks')
   document.getElementById('addBusk').addEventListener('click', event => {
     event.preventDefault()
     console.log('pingh')
+    
 
     axios.post('/api/busks', { 
       date: document.getElementById('date').value, 
       location: document.getElementById('location').value, 
       start: document.getElementById('startTime').value, 
-      end: document.getElementById('endTime').value
+      end: document.getElementById('endTime').value,
+      artistId: document.getElementById('artistId').value
     }) 
       .then(({ data }) => {
         console.log(data)
@@ -56,4 +58,21 @@ axios.get('/api/busks')
 
 
 
-  
+  // create a new artist
+
+document.getElementById('addArtist').addEventListener('click', event => {
+  event.preventDefault()
+  console.log('ping')
+
+  axios.post('/api/artists', {
+    name: document.getElementById('artistName').value,
+    genre: document.getElementById('genre').value,
+    image_url: document.getElementById('imgUrl').value
+  })
+    .then(({ data }) => {
+      console.log(data)
+      console.log('works')
+    })
+
+    .catch(err => console.log(err))
+})
