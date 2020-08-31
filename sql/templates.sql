@@ -15,7 +15,7 @@ busks template
     "location": ,
     "start": ,
     "end": ,
-    counter: 
+    "counter": 
 }
 
 social template
@@ -39,5 +39,6 @@ member template:
     "member4": ,
     "member4role": ,
     "member5": ,
-    "member5role": 
+    "member5role": ,
+    "artistId": 
 }
