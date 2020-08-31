@@ -17,6 +17,7 @@ router.post('/busks', (req, res) => {
         .then(busk => res.json(busk))
         .catch(err => console.log(err))
 })
+
 router.put('/busks/:id', (req, res) => {
     Busk.update(req.body, { where: { id: req.params.id } })
         .then(() => res.sendStatus(200))

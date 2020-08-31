@@ -8,7 +8,7 @@ router.get('/artists', (req, res) => {
 })
 
 router.get('/artists/:id', (req, res) => {
-    Artist.findOne({ where: { id: req.params.id }, include: [Drink] })
+    Artist.findOne({ where: { id: req.params.id }, include: [Busk, Member, Social] })
         .then(artist => res.json(artist))
         .catch(err => console.log(err))
 })
