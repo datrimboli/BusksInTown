@@ -2,7 +2,7 @@ USE busk_db;
 INSERT INTO artists (name, genre, image_url)
 VALUES ('The Unsung', 'Metal', 'https://i.imgur.com/k84Vf91.jpg');
 
-Use this on postman:
+-- Use this on postman:
 artists
 {
     "name": "The Unsung",
@@ -22,7 +22,11 @@ busks
     "location": ,
     "start": ,
     "end": ,
+<<<<<<< HEAD
     "counter": 
+=======
+    "counter:" 
+>>>>>>> b83ed388876039c9dd0b100400293c149759967e
 }
 
 
