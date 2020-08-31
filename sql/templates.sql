@@ -3,10 +3,7 @@ Artists template
 {
     "name": ,
     "genre": ,
-    "image_url": ,
-    "buskId": ,
-    "memberId": ,
-    "socialId":
+    "image_url": 
 }
 
 busks template
@@ -15,7 +12,8 @@ busks template
     "location": ,
     "start": ,
     "end": ,
-    counter: 
+    "counter": ,
+    "artistId": 
 }
 
 social template
@@ -26,6 +24,7 @@ social template
     "soundcloud": ,
     "youtube": ,
     "facebook":
+    "artistId":
 }
 
 member template:
@@ -39,5 +38,6 @@ member template:
     "member4": ,
     "member4role": ,
     "member5": ,
-    "member5role": 
+    "member5role": ,
+    "artistId":
 }
