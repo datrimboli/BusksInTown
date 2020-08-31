@@ -9,6 +9,7 @@ Artists template
     "socialId":
 }
 
+
 busks template
 {
     "date": ,
@@ -26,6 +27,7 @@ social template
     "soundcloud": ,
     "youtube": ,
     "facebook":
+    "artistId":
 }
 
 member template:
@@ -39,5 +41,6 @@ member template:
     "member4": ,
     "member4role": ,
     "member5": ,
-    "member5role": 
+    "member5role": ,
+    "artistId":
 }
