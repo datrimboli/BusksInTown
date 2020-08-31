@@ -1,8 +1,8 @@
 const router = require('express').Router()
-const { Busk } = require('../models')
+const { Busk, Artist } = require('../models')
 
 router.get('/busks', (req, res) => {
-  Busk.findAll()
+  Busk.findAll({ include: [Artist] })
     .then(busks => res.json(busks))
     .catch(err => console.log(err))
 })
