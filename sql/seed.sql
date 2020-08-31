@@ -22,7 +22,7 @@ busks
     "location": ,
     "start": ,
     "end": ,
-    counter: 
+    "counter": 
 }
 
 

@@ -16,7 +16,7 @@ busks template
     "location": ,
     "start": ,
     "end": ,
-    "counter": 
+    counter: 
 }
 
 social template
