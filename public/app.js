@@ -1,4 +1,5 @@
 console.log('hi')
+let artistLocal = JSON.parse(localStorage.getItem('artistLocal')) || []
 
 axios.get('/api/busks')
   .then(({ data }) => {
@@ -39,7 +40,7 @@ axios.get('/api/busks')
     }) 
       .then(({ data }) => {
         console.log(data)
-    
+        
           let buskElem = document.createElement('tr')
           // buskElem.className = 'row'
           buskElem.innerHTML = `
@@ -71,7 +72,13 @@ document.getElementById('addArtist').addEventListener('click', event => {
   })
     .then(({ data }) => {
       console.log(data)
-      console.log('works')
+      let artistLocal = JSON.parse(localStorage.getItem('artistLocal')) || []
+      let artistValue = data
+      artistLocal.push(artistValue)
+      console.log(artistLocal)
+      console.log(JSON.stringify(artistLocal))
+      localStorage.setItem('artistLocal', JSON.stringify(artistLocal))
+      console.log('Artist Added')
     })
 
     .catch(err => console.log(err))
@@ -79,3 +86,15 @@ document.getElementById('addArtist').addEventListener('click', event => {
 
 
 
+function artistOptionsList() {
+  let artistLocal = JSON.parse(localStorage.getItem('artistLocal')) || []
+  document.getElementById('artistOption').innerHTML = 'Select an Artist'
+  artistLocal.forEach(artist => {
+      let artistElem = document.createElement('option')
+      artistElem.textContent = artist.name
+      artistElem.value = artist.id
+      document.getElementById('artistOption').append(artistElem)
+  })
+}
+
+artistOptionsList()

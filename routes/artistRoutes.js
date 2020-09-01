@@ -1,14 +1,14 @@
 const router = require('express').Router()
-const { Artist, Busk, Member, Social } = require('../models')
+const { Artist, Busk, Social } = require('../models')
 
 router.get('/artists', (req, res) => {
-  Artist.findAll({ include: [Busk, Member, Social] })
+  Artist.findAll({ include: [Busk, Social] })
     .then(artists => res.json(artists))
     .catch(err => console.log(err))
 })
 
 router.get('/artists/:id', (req, res) => {
-    Artist.findOne({ where: { id: req.params.id }, include: [Busk, Member, Social] })
+    Artist.findOne({ where: { id: req.params.id }, include: [Busk, Social] })
         .then(artist => res.json(artist))
         .catch(err => console.log(err))
 })
