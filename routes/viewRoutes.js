@@ -7,7 +7,6 @@ router.get('/artists/:id', (req, res) => {
   res.render('artist', { id: req.params.id })
 })
 
-
 router.get('/', (req, res) => {
   res.render('index')
 })
