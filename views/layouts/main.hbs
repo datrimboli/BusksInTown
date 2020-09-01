@@ -6,17 +6,118 @@
   <title>Document</title>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
     integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+  <link rel="stylesheet" href="./style.css">
 </head>
 <body>
+  <ul class="nav justify-content-center">
+    <li class="nav-item">
+      <a class="nav-link active" href="/">Home</a>
+    </li>
+    <li class="nav-item">
+      {{!-- modal for add busk --}}
+      <button type="button" class="btn" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo">Add Busk</button>
+
+        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+          aria-hidden="true">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">New Busk</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+
+                <form>
+                  <div class="form-group">
+                    <label for="recipient-name" class="col-form-label">Artist Name</label>
+                    <input type="text" class="form-control" id="artistId">
+                  </div>
+                  <div class="form-group">
+                    <label for="message-text" class="col-form-label">Location</label>
+                    <textarea class="form-control" id="location"></textarea>
+                  </div>
+                  <div class="form-group">
+                    <label for="message-text" class="col-form-label">Genre</label>
+                    <textarea class="form-control" id="buskGenre"></textarea>
+                  </div>
+                  <div class="form-group">
+                    <label for="message-text" class="col-form-label">Start Time</label>
+                    <textarea class="form-control" id="startTime"></textarea>
+                  </div>
+                  <div class="form-group">
+                    <label for="message-text" class="col-form-label">End Time</label>
+                    <textarea class="form-control" id="endTime"></textarea>
+                  </div>
+                  <div class="form-group">
+                    <label for="message-text" class="col-form-label">Date</label>
+                    <input type="date" class="form-control" id="date"></input>
+                  </div>
+                </form>
+
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button id="addBusk" type="button" class="btn btn-primary">Add Busk</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+    </li>
+
+    <li class="nav-item">
+      {{!-- modal for add busk --}}
+      <button type="button" class="btn" data-toggle="modal" data-target="#exampleModal2" data-whatever="@mdo">Add Artist</button>
+
+        <div class="modal fade" id="exampleModal2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+          aria-hidden="true">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">New Artist</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+
+                <form>
+                  <div class="form-group">
+                    <label for="recipient-name" class="col-form-label">Artist Name</label>
+                    <input type="text" class="form-control" id="artistName">
+                  </div>
+                  <div class="form-group">
+                    <label for="message-text" class="col-form-label">Band Photo (Img URL)</label>
+                    <textarea class="form-control" id="imgUrl"></textarea>
+                  </div>
+                  <div class="form-group">
+                    <label for="message-text" class="col-form-label">Genre</label>
+                    <textarea class="form-control" id="genre"></textarea>
+                  </div>
+                </form>
+
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button id="addArtist" type="button" class="btn btn-primary">Add Busk</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+    </li>
+
+
+  </ul>
+
+  
+ 
+
+
   {{{ body }}}
   {{!-- bring in bootstrap, axios, and link our app.js --}}
-  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
-    integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
-    integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
-  <script src="./app.js"></script>
+
 </body>
 </html>
