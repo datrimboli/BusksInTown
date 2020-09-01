@@ -1,5 +1,5 @@
 const router = require('express').Router()
-const { Artist, Busk, Member, Social } = require('../models/index')
+const { Artist, Busk, Social } = require('../models/index')
 
 
 router.get('/artists/:id', (req, res) => {
