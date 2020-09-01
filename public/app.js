@@ -9,7 +9,7 @@ axios.get('/api/busks')
       let buskElem = document.createElement('tr')
       // buskElem.className = 'row'
       buskElem.innerHTML = `
-        <th scope="row">${busk.artist.name}</th>
+        <th scope="row"><a href="/artists/${busk.artist.id}">${busk.artist.name}</a></th>
         <td>${busk.location}</td>
         <td>${busk.artist.genre}</td>
         <td>Start:${busk.start}-End:${busk.end}</td>
@@ -76,3 +76,6 @@ document.getElementById('addArtist').addEventListener('click', event => {
 
     .catch(err => console.log(err))
 })
+
+
+
