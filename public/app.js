@@ -69,6 +69,7 @@ document.getElementById('addArtist').addEventListener('click', event => {
   axios.post('/api/artists', {
     name: document.getElementById('artistName').value,
     genre: document.getElementById('genre').value,
+    bio: document.getElementById('bio').value,
     image_url: document.getElementById('imgUrl').value
   })
     .then(({ data }) => {
