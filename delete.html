@@ -46,9 +46,7 @@
         document.getElementById('addArtist').addEventListener('click', event => {
             event.preventDefault()
             let artistLocal = JSON.parse(localStorage.getItem('artistLocal')) || []
-            let artistValue = document.getElementById('artist').value
-            artistLocal.push(artistValue)
-            localStorage.setItem('artistLocal', JSON.stringify(artistLocal))
+           
             console.log('Artist added')
             document.getElementById('artist').value = ''
             writeArtist()
