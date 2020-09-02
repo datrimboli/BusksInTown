@@ -82,6 +82,22 @@ document.getElementById('addArtist').addEventListener('click', event => {
       localStorage.setItem('artistLocal', JSON.stringify(artistLocal))
       console.log('Artist Added')
       artistOptionsList()
+      //starts here
+      axios.post('/api/socials', {
+        spotify: document.getElementById('spotify').value,
+        twitter: document.getElementById('twitter').value,
+        instagram: document.getElementById('instagram').value,
+        youtube: document.getElementById('youtube').value,
+        soundcloud: document.getElementById('soundcloud').value,
+        facebook: document.getElementById('facebook').value,
+        artistId: data.id
+
+      })
+        .then(({ data }) => {
+          console.log('this works')
+        })
+    
+        .catch(err => console.log(err))
     })
 
     .catch(err => console.log(err))
@@ -91,10 +107,10 @@ function artistOptionsList() {
   let artistLocal = JSON.parse(localStorage.getItem('artistLocal')) || []
   document.getElementById('artistId').innerHTML = '<option value="null">Select an Artist</option>'
   artistLocal.forEach(artist => {
-      let artistElem = document.createElement('option')
-      artistElem.textContent = artist.name
-      artistElem.value = artist.id
-      document.getElementById('artistId').append(artistElem)
+    let artistElem = document.createElement('option')
+    artistElem.textContent = artist.name
+    artistElem.value = artist.id
+    document.getElementById('artistId').append(artistElem)
   })
 }
 
