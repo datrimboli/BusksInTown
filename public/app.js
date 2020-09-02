@@ -15,7 +15,7 @@ axios.get('/api/busks')
       buskElem.innerHTML = `
         <th scope="row"><a href="/artists/${busk.artist.id}">${busk.artist.name}</a></th>
         <td>${busk.location}</td>
-        <td>Start:${busk.start}-End:${busk.end}</td>
+        <td>Start:${busk.start} - End:${busk.end}</td>
         <td>${busk.date}</td>
       `
     
@@ -47,7 +47,7 @@ document.getElementById('addBusk').addEventListener('click', event => {
           buskElem.innerHTML = `
             <th scope="row"><a href="/artists/${data.artistId}">${document.getElementById('artistName').value}</a></th>
             <td>${document.getElementById('location').value}</td>
-            <td>Start:${document.getElementById('startTime').value}:00-End:${document.getElementById('endTime').value}:00</td>
+            <td>Start:${document.getElementById('startTime').value}:00 - End:${document.getElementById('endTime').value}:00</td>
             <td>${document.getElementById('date').value}</td> 
           `
           document.getElementById('busks').append(buskElem)
