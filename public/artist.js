@@ -14,9 +14,8 @@ axios.get(`/api/artists/${artistId}`)
     <img id="bandPhoto" src="${data.image_url}" alt="band photo">
     `
     document.getElementById('bandBio').innerHTML = `
-    <br>
-    ${data.bio} 
-    `
+      ${data.bio}
+      `
 
     let sortedData = data.busks.sort((a, b) => new Date(a.date) - new Date(b.date))
     console.log(sortedData)
