@@ -65,13 +65,13 @@ db.Artist.bulkCreate([
 {
     name: "The Unsung",
     genre: "Metal",
-    bio: "",
+    bio: "Devin eats reeses",
     image_url: "https://i.imgur.com/k84Vf91.jpg"  
 },
 {
     name: "Off Road Minivan",
     genre: "Alternative Rock",
-    bio: "",
+    bio: "Dave is the coolest guy",
     image_url: "https://imgur.com/a/iHDkhUZ"
 },
 {
