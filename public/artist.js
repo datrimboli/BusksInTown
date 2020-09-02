@@ -17,7 +17,7 @@ axios.get(`/api/artists/${artistId}`)
     document.getElementById('bandBio').innerHTML = `
     <p>${data.bio}</p>
     `
-
+})
      
 
     
@@ -35,7 +35,7 @@ axios.get(`/api/artists/${artistId}`)
       `
       document.getElementById('busks').append(buskElem)
       
-    })
+    
     
 
     let facebook = data.social.facebook || '/'
