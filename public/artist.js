@@ -29,9 +29,9 @@ axios.get(`/api/artists/${artistId}`)
       // buskElem.className = 'row'
       buskElem.innerHTML = `
       <th scope="row">${busk.location}</th>
-      <td>${busk.start}</td>
-      <td>${busk.end}</td>
-      <td>${busk.date}</td>
+      <td>${moment(busk.start, 'HH:mm').format('LT')}</td>
+      <td>${moment(busk.end, 'HH:mm').format('LT')}</td>
+      <td>${moment(busk.date).format('dddd, MMMM Do YYYY')}</td>
       
       `
       document.getElementById('busks').append(buskElem)
