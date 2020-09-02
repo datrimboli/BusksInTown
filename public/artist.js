@@ -55,7 +55,6 @@ axios.get(`/api/artists/${artistId}`)
         <li><a href="${soundcloud}" target="blank">Soundcloud</a></li>
         <li><a href="${twitter}" target="blank">Twitter</a></li>
         <li><a href="${youtube}" target="blank">Youtube</a></li>
-        
         `
     
     
