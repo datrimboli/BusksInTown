@@ -1,3 +1,113 @@
+<ul class="nav justify-content-center">
+    <li class="nav-item">
+      <a class="nav-link active" href="/">Home</a>
+    </li>
+    <li class="nav-item">
+      {{!-- modal for add busk --}}
+      <button type="button" class="btn" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo">Add Busk</button>
+
+        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+          aria-hidden="true">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">New Busk</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+
+                <form>
+                  <div class="form-group">
+                    <label for="recipient-name" class="col-form-label">Artist Name</label>
+                    <select class="form-control" id="artistId">
+                      <option value="null">Select an Artist</option>
+                    </select>
+                  </div>
+                  <div class="form-group">
+                    <label for="message-text" class="col-form-label">Location</label>
+                    <textarea class="form-control" id="location"></textarea>
+                  </div>
+                  <div class="form-group">
+                    <label for="message-text" class="col-form-label">Genre</label>
+                    <textarea class="form-control" id="buskGenre"></textarea>
+                  </div>
+                  <div class="form-group">
+                    <label for="message-text" class="col-form-label">Start Time</label>
+                    <input type="time" class="form-control" id="startTime">
+                  </div>
+                  <div class="form-group">
+                    <label for="message-text" class="col-form-label">End Time</label>
+                    <input type="time" class="form-control" id="endTime">
+                  </div>
+                  <div class="form-group">
+                    <label for="message-text" class="col-form-label">Date</label>
+                    <input type="date" class="form-control" id="date"></input>
+                  </div>
+                </form>
+
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button id="addBusk" type="button" class="btn btn-primary" data-dismiss="modal">Add Busk</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+    </li>
+
+    <li class="nav-item">
+      {{!-- modal for add busk --}}
+      <button type="button" class="btn" data-toggle="modal" data-target="#exampleModal2" data-whatever="@mdo">Add Artist</button>
+
+        <div class="modal fade" id="exampleModal2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+          aria-hidden="true">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">New Artist</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+
+                <form>
+                  <div class="form-group">
+                    <label for="recipient-name" class="col-form-label">Artist Name</label>
+                    <input type="text" class="form-control" id="artistName">
+                  </div>
+                  <div class="form-group">
+                    <label for="message-text" class="col-form-label">Band Photo (Img URL)</label>
+                    <textarea class="form-control" id="imgUrl"></textarea>
+                  </div>
+                  <div class="form-group">
+                    <label for="message-text" class="col-form-label">Genre</label>
+                    <textarea class="form-control" id="genre"></textarea>
+                  </div>
+                  <div class="form-group">
+                    <label for="message-text" class="col-form-label">Bio</label>
+                    <textarea class="form-control" id="bio"></textarea>
+                  </div>
+                </form>
+
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button id="addArtist" type="button" class="btn btn-primary" data-dismiss="modal">Add Artist</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+    </li>
+
+
+  </ul>
+
+
 <h1 class='text-center'>Busks In Town</h1>
 
 
