@@ -6,8 +6,9 @@ let artistLocal = JSON.parse(localStorage.getItem('artistLocal')) || []
 axios.get('/api/busks')
   .then(({ data }) => {
     console.log(data)
-
-    data.forEach(busk => {
+      let sortedData = data.sort((a, b) => new Date(a.date) - new Date(b.date))
+      console.log(sortedData)
+    sortedData.forEach(busk => {
 
       let buskElem = document.createElement('tr')
       // buskElem.className = 'row'
@@ -17,11 +18,11 @@ axios.get('/api/busks')
         <td>${busk.artist.genre}</td>
         <td>Start:${busk.start}-End:${busk.end}</td>
         <td>${busk.date}</td>
-        <td>${busk.counter} <button class="btn btn-primary">I'm Attending!</button></td>  
       `
+    
       document.getElementById('busks').append(buskElem)
     })
-
+    
   })
   .catch(err => console.log(err))
 
@@ -50,8 +51,7 @@ document.getElementById('addBusk').addEventListener('click', event => {
             <td>${document.getElementById('location').value}</td>
             <td>${document.getElementById('genre').value}</td>
             <td>Start:${document.getElementById('startTime').value}-End:${document.getElementById('endTime').value}</td>
-            <td>${document.getElementById('date').value}</td>
-            <td>0 <button class="btn btn-primary">I'm Attending!</button></td>  
+            <td>${document.getElementById('date').value}</td> 
           `
       document.getElementById('busks').append(buskElem)
     })
@@ -59,7 +59,7 @@ document.getElementById('addBusk').addEventListener('click', event => {
     .catch(err => console.log(err))
 })
 
-
+  
 // create a new artist
 
 document.getElementById('addArtist').addEventListener('click', event => {
