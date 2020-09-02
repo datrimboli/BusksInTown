@@ -13,8 +13,7 @@ app.set('view engine', '.hbs')
 
 app.use(require('./routes'))
 
-
-// require('./db').sync({force: true}) 
+// require('./db').sync({force: true})
 require('./db').sync()
   .then(() => app.listen(process.env.PORT || 3000))
   .catch(err => console.log(err))
