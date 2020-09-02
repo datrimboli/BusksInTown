@@ -37,8 +37,6 @@ socials
 }
 
 
-
-
 members
 {
     "member1": ,
@@ -53,3 +51,77 @@ members
     "member5role": 
 }
 
+-- Run this in server.js
+const db = require('./models')
+db.Artist.bulkCreate([
+{
+    name: "The Unsung",
+    genre: "Metal",
+    bio: "",
+    image_url: "https://i.imgur.com/k84Vf91.jpg"  
+},
+{
+    name: "Off Road Minivan",
+    genre: "Alternative Rock",
+    bio: "",
+    image_url: "https://imgur.com/a/iHDkhUZ"
+},
+{
+    name: "Eric's Lobster House",
+    genre: "Hot n Spicy",
+    bio: "Get swoll",
+    image_url: "image"
+},
+{
+    name: "Kenny's Lawnchair",
+    genre: "Grass",
+    bio: "I eat ice cereal",
+    image_url: "kennyiscute"
+},
+{
+    name: "Calum's Backyard",
+    genre: "Diet Coke",
+    bio: "Has socks",
+    image_url: "calumstockimage"
+}
+])
+
+-- Be sure to add artists before adding Busks
+const db = require('./models')
+db.Busk.bulkCreate([
+    {
+        date: "2020-09-02",
+        location: "123 Main St",
+        start: "18:00:00",
+        end: "19:00:00",
+        artistId: 1
+    },
+    {
+        date: "2020-09-03",
+        location: "222 Temple St",
+        start: "15:00:00",
+        end: "16:00:00",
+        artistId: 2
+    },
+    {
+        date: "2020-09-06",
+        location: "3 Rainy Rd",
+        start: "09:00:00",
+        end: "10:00:00",
+        artistId: 3
+    },
+    {
+        date: "2020-09-06",
+        location: "3 Rainy Rd",
+        start: "15:00:00",
+        end: "16:00:00",
+        artistId: 5
+    },
+    {
+        date: "2020-09-05",
+        location: "40 Fore Error Cir",
+        start: "12:00:00",
+        end: "13:00:00",
+        artistId: 5
+    },
+])
