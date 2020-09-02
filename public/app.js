@@ -6,21 +6,23 @@ let artistLocal = JSON.parse(localStorage.getItem('artistLocal')) || []
 axios.get('/api/busks')
   .then(({ data }) => {
     console.log(data)
-
-    data.forEach(busk => {
+      let sortedData = data.sort((a, b) => new Date(a.date) - new Date(b.date))
+      console.log(sortedData)
+    sortedData.forEach(busk => {
 
       let buskElem = document.createElement('tr')
       // buskElem.className = 'row'
       buskElem.innerHTML = `
         <th scope="row"><a href="/artists/${busk.artist.id}">${busk.artist.name}</a></th>
         <td>${busk.location}</td>
-        <td>Start:${busk.start}-End:${busk.end}</td>
+        <td>${busk.start}</td>
+        <td>${busk.end}</td>
         <td>${busk.date}</td>
-        <td>${busk.counter} <button class="btn btn-primary">I'm Attending!</button></td>  
       `
+    
       document.getElementById('busks').append(buskElem)
     })
-
+    
   })
   .catch(err => console.log(err))
 
@@ -41,21 +43,22 @@ document.getElementById('addBusk').addEventListener('click', event => {
   })
     .then(({ data }) => {
       console.log(data)
-          let buskElem = document.createElement('tr')
-          // buskElem.className = 'row'
-          buskElem.innerHTML = `
-            <th scope="row"><a href="/artists/${data.artistId}">${document.getElementById('artistName').value}</a></th>
-            <td>${document.getElementById('location').value}</td>
-            <td>Start:${document.getElementById('startTime').value}:00-End:${document.getElementById('endTime').value}:00</td>
-            <td>${document.getElementById('date').value}</td>
-            <td>0 <button class="btn btn-primary">I'm Attending!</button></td>  
-          `
-          document.getElementById('busks').append(buskElem)
+          // let buskElem = document.createElement('tr')
+          // buskElem.innerHTML = `
+          //   <th scope="row"><a href="/artists/${data.artistId}">${document.getElementById('artistName').value}</a></th>
+          //   <td>${document.getElementById('location').value}</td>
+          //   <td>${document.getElementById('startTime').value}:00</td>
+          //   <td>${document.getElementById('endTime').value}:00</td>
+          //   <td>${document.getElementById('date').value}</td> 
+          // `
+          // document.getElementById('busks').append(buskElem)
+
+          
     })
     .catch(err => console.log(err))
 })
 
-
+  
 // create a new artist
 
 document.getElementById('addArtist').addEventListener('click', event => {
