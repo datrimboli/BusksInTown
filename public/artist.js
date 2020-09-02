@@ -15,23 +15,27 @@ axios.get(`/api/artists/${artistId}`)
     <img id="bandPhoto" src="${data.image_url}" alt="band photo">
     `
     document.getElementById('bandBio').innerHTML = `
-    <p>${data.bio}</p>
+    <br>
+    ${data.bio} 
+
     `
-})
-     
+
+    let sortedData = data.busks.sort((a, b) => new Date(a.date) - new Date(b.date))
+    console.log(sortedData)
 
     
     
     // busks
-    data.busks.forEach(busk => {
+    sortedData.forEach(busk => {
       
       let buskElem = document.createElement('tr')
       // buskElem.className = 'row'
       buskElem.innerHTML = `
       <th scope="row">${busk.location}</th>
-      <td>Start:${busk.start}-End:${busk.end}</td>
+      <td>${busk.start}</td>
+      <td>${busk.end}</td>
       <td>${busk.date}</td>
-      <td>${busk.counter} <button class="btn btn-primary">I'm Attending!</button></td>  
+      
       `
       document.getElementById('busks').append(buskElem)
       
