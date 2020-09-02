@@ -1,6 +1,6 @@
 # BusksInTown
 
-Mankoto Asshi
+# Kenny Was Here
 
 We're all coding along
 

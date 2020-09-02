@@ -18,6 +18,7 @@ router.post('/artists', (req, res) => {
         .then(artist => res.json(artist))
         .catch(err => console.log(err))
 })
+
 router.put('/artists/:id', (req, res) => {
     Artist.update(req.body, { where: { id: req.params.id } })
         .then(() => res.sendStatus(200))
