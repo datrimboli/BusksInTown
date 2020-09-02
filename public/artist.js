@@ -42,7 +42,7 @@ axios.get(`/api/artists/${artistId}`)
     let facebook = data.social.facebook || '/'
     let instagram = data.social.instagram || '/'
     let spotify = data.social.spotify || '/'
-    let soudcloud = data.social.soudcloud || '/'
+    let soundcloud = data.social.soundcloud || '/'
     let twitter = data.social.twitter || '/'
     let youtube = data.social.youtube || '/'
 
@@ -50,13 +50,12 @@ axios.get(`/api/artists/${artistId}`)
         document.getElementById('socials').innerHTML = `
         <h4>Socials</h4>
         <hr>
-        <li><a href="${facebook}">Facebook</a></li>
-        <li><a href="${instagram}">Instagram</a></li>
-        <li><a href="${spotify}">Spotify</a></li>
-        <li><a href="${soundcloud}">Soundcloud</a></li>
-        <li><a href="${twitter}">Twitter</a></li>
-        <li><a href="${youtube}">Youtube</a></li>
-        
+        <li><a href="${facebook}" target="blank">Facebook</a></li>
+        <li><a href="${instagram}" target="blank">Instagram</a></li>
+        <li><a href="${spotify}" target="blank">Spotify</a></li>
+        <li><a href="${soundcloud}" target="blank">Soundcloud</a></li>
+        <li><a href="${twitter}" target="blank">Twitter</a></li>
+        <li><a href="${youtube}" target="blank">Youtube</a></li>
         `
     
     
