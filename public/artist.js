@@ -15,7 +15,8 @@ axios.get(`/api/artists/${artistId}`)
     <img id="bandPhoto" src="${data.image_url}" alt="band photo">
     `
     document.getElementById('bandBio').innerHTML = `
-    <p>${data.bio}</p>
+    <p>${data.bio}</p> 
+    
     `
 
      
