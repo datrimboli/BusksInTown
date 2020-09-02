@@ -15,9 +15,9 @@ axios.get('/api/busks')
       buskElem.innerHTML = `
         <th scope="row"><a href="/artists/${busk.artist.id}">${busk.artist.name}</a></th>
         <td>${busk.location}</td>
-        <td>${busk.start}</td>
-        <td>${busk.end}</td>
-        <td>${busk.date}</td>
+        <td>${moment(busk.start,'HH:mm').format('LT')}</td>
+        <td>${moment(busk.end,'HH:mm').format('LT')}</td>
+        <td>${moment(busk.date).format('dddd, MMMM Do YYYY')}</td>
       `
     
       document.getElementById('busks').append(buskElem)
@@ -53,7 +53,7 @@ document.getElementById('addBusk').addEventListener('click', event => {
           // `
           // document.getElementById('busks').append(buskElem)
 
-          
+
     })
     .catch(err => console.log(err))
 })
