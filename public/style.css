@@ -6,6 +6,9 @@ a {
 color:turquoise;
 }
 
+* {
+  color: white;
+}
 #mainPhoto {
   width: 300px;
   margin-bottom: 5%;
@@ -16,7 +19,7 @@ color:turquoise;
   margin-bottom: 5%;
 }
 
-#anything {
+#anything, #genre {
   padding: 0px;
   margin: 0px;
 }
@@ -50,3 +53,4 @@ color:turquoise;
   background-color: gray;
   color: white
 }
+ 

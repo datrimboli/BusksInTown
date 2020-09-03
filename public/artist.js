@@ -16,6 +16,9 @@ axios.get(`/api/artists/${artistId}`)
     document.getElementById('bandBio').innerHTML = `
       ${data.bio}
       `
+    document.getElementById('genre').innerHTML = `
+      Genre: ${data.genre}
+      `
 
     let sortedData = data.busks.sort((a, b) => new Date(a.date) - new Date(b.date))
     console.log(sortedData)
