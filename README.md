@@ -7,7 +7,7 @@
 >* Dave Trimboli
 >* Kenny Yang
 
-This application is deployed at : 
+This application is deployed at : https://guarded-crag-60613.herokuapp.com/
 
 ### Description:
 This full stack application is a similar app to bands in town.  Any band, artist, or musician of any kind, can make an artist profile, and post a local busk wherever they want to perform.  Being in a pandemic and having music venues being closed has made it very difficult for musicians and artists to perform live.  You can always perform a busk on a street corner or outside of a local grocery store!  This app has created a unique and simple way to showcase your busks and your art with the community
