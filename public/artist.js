@@ -48,8 +48,7 @@ axios.get(`/api/artists/${artistId}`)
 
     
         document.getElementById('socials').innerHTML = `
-        <h4>Socials</h4>
-        <hr>
+        
         <li class="list-group-item"><img style="background-color: lightblue;" height="28" width="28" src="https://unpkg.com/simple-icons@v3/icons/facebook.svg"/><a href="${facebook}" target="blank"> Facebook</a></li>
         <li class="list-group-item"><img style="background-color: pink;" height="28" width="28" src="https://unpkg.com/simple-icons@v3/icons/instagram.svg"/><a href="${instagram}" target="blank"> Instagram</a></li>
         <li class="list-group-item"><img style="background-color: lightgreen;" height="28" width="28" src="https://unpkg.com/simple-icons@v3/icons/spotify.svg"/><a href="${spotify}" target="blank"> Spotify</a></li>
