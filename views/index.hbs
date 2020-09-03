@@ -1,10 +1,10 @@
 <ul class="nav justify-content-center">
     <li class="nav-item">
-      <a class="nav-link active" href="/">Home</a>
+      <a class="nav-link active font" href="/">Home</a>
     </li>
     <li class="nav-item">
       {{!-- modal for add busk --}}
-      <button type="button" class="btn" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo">Add Busk</button>
+      <button type="button" class="btn font" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo">Add Busk</button>
 
         <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
           aria-hidden="true">
@@ -56,7 +56,7 @@
 
     <li class="nav-item">
       {{!-- modal for add busk --}}
-      <button type="button" class="btn" data-toggle="modal" data-target="#exampleModal2" data-whatever="@mdo">Add Artist</button>
+      <button type="button" class="btn font" data-toggle="modal" data-target="#exampleModal2" data-whatever="@mdo">Add Artist</button>
 
         <div class="modal fade" id="exampleModal2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
           aria-hidden="true">
@@ -128,11 +128,12 @@
   </ul>
 
 
-<h1 class='text-center'>Busks In Town, Irvine</h1>
+<h1 class='animate__animated animate__backInLeft text-center font'>Busks In Town</h1>
+<h2 class='animate__animated animate__backInRight text-center font'>-Irvine-</h2>
 
 
 <div class="container text-center">
-  <img id="mainPhoto" src="./photos/mainPhoto.jpg" alt="busk photo">
+  <img class="rad"id="mainPhoto" src="./photos/mainPhoto.jpg" alt="busk photo">
 </div>
 
 
@@ -140,11 +141,11 @@
   <table class="table">
     <thead>
       <tr>
-        <th scope="col">Artist</th>
-        <th scope="col">Location</th>
-        <th scope="col">Start Time</th>
-        <th scope="col">End Time</th>
-        <th scope="col">Dates</th>
+        <th class="font" scope="col">Artist</th>
+        <th class="font" scope="col">Location</th>
+        <th class="font" scope="col">Start Time</th>
+        <th class="font" scope="col">End Time</th>
+        <th class="font" scope="col">Dates</th>
       </tr>
     </thead>
     <tbody id="busks">

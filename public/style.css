@@ -1,5 +1,5 @@
 #mainPhoto {
-  width: 500px;
+  width: 300px;
   margin-bottom: 5%;
 }
 
@@ -11,4 +11,13 @@
 #anything {
   padding: 0px;
   margin: 0px;
+}
+
+.font {
+  font-variant-caps: all-small-caps;
+  /* font-style: italic; */
+}
+
+.rad{
+  border-radius: 30%;
 }
