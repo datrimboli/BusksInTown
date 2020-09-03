@@ -5,32 +5,32 @@ class Social extends Model { }
 
 Social.init({
     spotify: {
-        type: DataTypes.STRING,
+        type: DataTypes.TEXT,
         allowNull: true,
         defaultValue: 'None Available'
     },
     twitter: {
-        type: DataTypes.STRING,
+        type: DataTypes.TEXT,
         allowNull: true,
         defaultValue: 'None Available'
     },
     instagram: {
-        type: DataTypes.STRING,
+        type: DataTypes.TEXT,
         allowNull: true,
         defaultValue: 'None Available'
     },
     soundcloud: {
-        type: DataTypes.STRING,
+        type: DataTypes.TEXT,
         allowNull: true,
         defaultValue: 'None Available'
     },
     youtube: {
-        type: DataTypes.STRING,
+        type: DataTypes.TEXT,
         allowNull: true,
         defaultValue: 'None Available'
     },
     facebook: {
-        type: DataTypes.STRING,
+        type: DataTypes.TEXT,
         allowNull: true,
         defaultValue: 'None Available'
     },
