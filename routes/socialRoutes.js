@@ -28,7 +28,7 @@ router.delete('/socials/:id', (req, res) => {
         .then(() => res.sendStatus(200))
         .catch(err => console.log(err))
 })
-router.post('socials/seed', (req, res) => {
+router.post('/socials/seed', (req, res) => {
   Social.bulkCreate([
     {
       spotify: "https://open.spotify.com/artist/27Wo1BSPyBtuVmBg7jYkNm?si=C-KN9cWMRj6em7YMVo_5Hw",
