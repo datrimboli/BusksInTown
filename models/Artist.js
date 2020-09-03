@@ -12,7 +12,7 @@ Artist.init({
       allowNull: false
     },
     bio: {
-      type: DataTypes.STRING,
+      type: DataTypes.TEXT,
       allowNull: false
     },
     image_url: {   //artists can add image url and we'll be able to render it onto an html page using img tags. For this project we can just use imgur links. 
