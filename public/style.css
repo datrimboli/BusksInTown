@@ -1,14 +1,55 @@
+.modalFont{
+  color: turquoise;
+}
+
+a{
+color:turquoise;
+}
+
+*{
+  color: white;
+}
 #mainPhoto {
-  width: 500px;
+  width: 300px;
   margin-bottom: 5%;
 }
 
 #bandPhoto {
-  width: 200px;
+  width: 100%;
   margin-bottom: 5%;
+ 
 }
 
 #anything {
   padding: 0px;
   margin: 0px;
+}
+
+.font {
+  font-variant-caps: all-small-caps;
+  /* font-style: italic; */
+}
+
+.rad{
+  border-radius: 30%;
+}
+
+body {
+  background-color: rgb(13, 13, 13);
+  color: white;
+}
+
+.list-group-item{
+  background-color: rgb(57, 57, 57);
+  
+}
+#socials{
+  border-top-left-radius: 50px;
+  border-top-right-radius: 50px;
+  border-bottom-left-radius: 50px;
+  border-bottom-right-radius: 50px;
+}
+
+.modal-content{
+  background-color: gray;
 }

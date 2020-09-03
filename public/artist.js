@@ -48,14 +48,13 @@ axios.get(`/api/artists/${artistId}`)
 
     
         document.getElementById('socials').innerHTML = `
-        <h4>Socials</h4>
-        <hr>
-        <li><img style="background-color: blue;" height="28" width="28" src="https://unpkg.com/simple-icons@v3/icons/facebook.svg"/><a href="${facebook}" target="blank"> Facebook</a></li>
-        <li><img style="background-color: pink;" height="28" width="28" src="https://unpkg.com/simple-icons@v3/icons/instagram.svg"/><a href="${instagram}" target="blank"> Instagram</a></li>
-        <li><img style="background-color: green;" height="28" width="28" src="https://unpkg.com/simple-icons@v3/icons/spotify.svg"/><a href="${spotify}" target="blank"> Spotify</a></li>
-        <li><img style="background-color: darkorange;" height="28" width="28" src="https://unpkg.com/simple-icons@v3/icons/soundcloud.svg"/><a href="${soundcloud}" target="blank"> Soundcloud</a></li>
-        <li><img style="background-color: lightblue;" height="28" width="28" src="https://unpkg.com/simple-icons@v3/icons/twitter.svg"/><a href="${twitter}" target="blank"> Twitter</a></li>
-        <li><img style="background-color: red;" height="28" width="28" src="https://unpkg.com/simple-icons@v3/icons/youtube.svg"/><a href="${youtube}" target="blank"> Youtube</a></li>
+        
+        <li class="list-group-item"><img style="background-color: lightblue;" height="28" width="28" src="https://unpkg.com/simple-icons@v3/icons/facebook.svg"/><a href="${facebook}" target="blank"> Facebook</a></li>
+        <li class="list-group-item"><img style="background-color: pink;" height="28" width="28" src="https://unpkg.com/simple-icons@v3/icons/instagram.svg"/><a href="${instagram}" target="blank"> Instagram</a></li>
+        <li class="list-group-item"><img style="background-color: lightgreen;" height="28" width="28" src="https://unpkg.com/simple-icons@v3/icons/spotify.svg"/><a href="${spotify}" target="blank"> Spotify</a></li>
+        <li class="list-group-item"><img style="background-color: darkorange;" height="28" width="28" src="https://unpkg.com/simple-icons@v3/icons/soundcloud.svg"/><a href="${soundcloud}" target="blank"> Soundcloud</a></li>
+        <li class="list-group-item"><img style="background-color: lightblue;" height="28" width="28" src="https://unpkg.com/simple-icons@v3/icons/twitter.svg"/><a href="${twitter}" target="blank"> Twitter</a></li>
+        <li class="list-group-item"><img style="background-color: red;" height="28" width="28" src="https://unpkg.com/simple-icons@v3/icons/youtube.svg"/><a href="${youtube}" target="blank"> Youtube</a></li>
         `
     
     
