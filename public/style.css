@@ -2,13 +2,10 @@
   color: turquoise;
 }
 
-a{
+a {
 color:turquoise;
 }
 
-*{
-  color: white;
-}
 #mainPhoto {
   width: 300px;
   margin-bottom: 5%;
@@ -17,7 +14,6 @@ color:turquoise;
 #bandPhoto {
   width: 100%;
   margin-bottom: 5%;
- 
 }
 
 #anything {
@@ -34,15 +30,15 @@ color:turquoise;
   border-radius: 30%;
 }
 
-body {
+.darkMode {
   background-color: rgb(13, 13, 13);
   color: white;
 }
 
-.list-group-item{
+.list-group-item {
   background-color: rgb(57, 57, 57);
-  
 }
+
 #socials{
   border-top-left-radius: 50px;
   border-top-right-radius: 50px;
@@ -50,6 +46,7 @@ body {
   border-bottom-right-radius: 50px;
 }
 
-.modal-content{
+.modal-content {
   background-color: gray;
+  color: white
 }

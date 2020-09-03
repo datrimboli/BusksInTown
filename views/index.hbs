@@ -9,7 +9,7 @@
         <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
           aria-hidden="true">
           <div class="modal-dialog" role="document">
-            <div class="modal-content">
+            <div class="modal-content bg-secondary" id="modal-busk">
               <div class="modal-header">
                 <h5 class="modal-title" id="exampleModalLabel">New Busk</h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
@@ -61,7 +61,7 @@
         <div class="modal fade" id="exampleModal2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
           aria-hidden="true">
           <div class="modal-dialog" role="document">
-            <div class="modal-content">
+            <div class="modal-content bg-secondary" id="modal-artist">
               <div class="modal-header">
                 <h5 class="modal-title" id="exampleModalLabel">New Artist</h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
@@ -125,6 +125,10 @@
     </li>
 
 
+    <li class="nav-item">
+      <button class="btn btn-dark" id="toggleDarkMode">Toggle Dark Mode</button>
+    </li>
+
   </ul>
 
 
@@ -138,7 +142,7 @@
 
 
 <div class="container">
-  <table class="table">
+  <table class="table darkMode" id="tableContent">
     <thead>
       <tr>
         <th class="font" scope="col">Artist</th>

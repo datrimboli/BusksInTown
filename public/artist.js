@@ -62,7 +62,11 @@ axios.get(`/api/artists/${artistId}`)
 
 
 
-
     
   })
   .catch(err => console.log(err))
+
+document.getElementById('toggleDarkMode').addEventListener('click', event => {
+    document.body.classList.toggle('darkMode')
+    document.getElementById('tableContent').classList.toggle('darkMode')
+})
