@@ -3,10 +3,9 @@ Artists template
 {
     "name": ,
     "genre": ,
+    "bio": ,
     "image_url": ,
-    "buskId": ,
-    "memberId": ,
-    "socialId":
+    
 }
 
 
